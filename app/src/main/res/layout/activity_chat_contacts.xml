@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvContactsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Chat"
+        android:textColor="#172B4D"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etSearchContacts"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@android:drawable/edit_text"
+        android:hint="Search employees"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:singleLine="true"
+        android:inputType="text"
+        android:drawableStart="@android:drawable/ic_menu_search" />
+
+    <TextView
+        android:id="@+id/tvContactsStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Loading contacts..."
+        android:textColor="#64748B"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:padding="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerChatContacts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnForwardSelected"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:text="Forward Selected"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</LinearLayout>

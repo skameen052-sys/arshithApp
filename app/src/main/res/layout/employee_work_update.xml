@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F3F6F4"
+    android:clipToPadding="false"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <!-- HEADER -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="76dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="10dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/bg_work_update_back"
+                android:contentDescription="Back"
+                android:padding="11dp"
+                android:src="@drawable/ic_back_arrow"
+                android:tint="#0F1F19" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="Work updates"
+                android:textColor="#0F1F19"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_work_update_date"
+                android:drawableStart="@drawable/ic_calendar_small"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Thu, 29 Oct"
+                android:textColor="#0F1F19"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- PROGRESS CARD -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_work_update_progress"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TODAY'S PROGRESS"
+                    android:textColor="#A9D9C3"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvProgressCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="0 of 4 submitted"
+                    android:textColor="#FFFFFF"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <!-- PROGRESS STEPS -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="7dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/progressStep1"
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_progress_step_inactive" />
+
+                    <View
+                        android:id="@+id/progressStep2"
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/bg_progress_step_inactive" />
+
+                    <View
+                        android:id="@+id/progressStep3"
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/bg_progress_step_inactive" />
+
+                    <View
+                        android:id="@+id/progressStep4"
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/bg_progress_step_inactive" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvNextWindow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Next window opens at 10:30 AM"
+                    android:textColor="#A9D9C3"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- PROGRESS RING -->
+
+            <FrameLayout
+                android:id="@+id/progressRingContainer"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginStart="14dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvProgressPercent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="0%"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- SCHEDULE HEADER -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Today's schedule"
+                android:textColor="#0F1F19"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 updates today"
+                android:textColor="#64756D"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- TIMELINE CONTAINER -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <!-- UPDATE 1 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp">
+
+                <FrameLayout
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#34D399" />
+
+                    <TextView
+                        android:id="@+id/tvTimeline1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_timeline_dot"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+                <include
+                    android:id="@+id/section1"
+                    layout="@layout/item_work_update_01"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <!-- UPDATE 2 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp">
+
+                <FrameLayout
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#34D399" />
+
+                    <TextView
+                        android:id="@+id/tvTimeline2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_timeline_dot"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+                <include
+                    android:id="@+id/section2"
+                    layout="@layout/item_work_update_02"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <!-- UPDATE 3 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp">
+
+                <FrameLayout
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_timeline_dashed" />
+
+                    <TextView
+                        android:id="@+id/tvTimeline3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_timeline_dot"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+                <include
+                    android:id="@+id/section3"
+                    layout="@layout/item_work_update_03"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <!-- UPDATE 4 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp">
+
+                <FrameLayout
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_timeline_dashed" />
+
+                    <TextView
+                        android:id="@+id/tvTimeline4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_timeline_dot"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+                <include
+                    android:id="@+id/section4"
+                    layout="@layout/item_work_update_04"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- FOOTER -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="6dp"
+            android:gravity="center"
+            android:text="You can submit each update only during its window"
+            android:textColor="#64756D"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</ScrollView>

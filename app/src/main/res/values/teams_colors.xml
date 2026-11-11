@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="teams_primary">#713DE5</color>
+    <color name="teams_primary_light">#EAE2FF</color>
+
+    <color name="teams_background">#F7F8FC</color>
+    <color name="teams_card">#FFFFFF</color>
+
+    <color name="teams_text">#202235</color>
+    <color name="teams_secondary_text">#85899B</color>
+
+    <color name="teams_border">#E8EAF2</color>
+    <color name="teams_success">#22C55E</color>
+    <color name="teams_danger">#EF4444</color>
+
+</resources>

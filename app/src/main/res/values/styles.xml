@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- EXISTING PROFILE IMAGE STYLE -->
+    <style name="ProfileImageCircle">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- WORK UPDATE CARD -->
+    <style name="WorkUpdateCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:background">@drawable/bg_work_update_card</item>
+        <item name="android:elevation">3dp</item>
+    </style>
+
+    <!-- CENTERED ICON CIRCLE -->
+    <style name="WorkUpdateIconCircle">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:background">@drawable/bg_work_update_icon_circle</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <!-- ICON IMAGE -->
+    <style name="WorkUpdateIcon">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- DETAILS COLUMN -->
+    <style name="WorkUpdateDetails">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- LABEL -->
+    <style name="WorkUpdateLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_work_update_status</item>
+        <item name="android:paddingStart">7dp</item>
+        <item name="android:paddingEnd">7dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textColor">#00875A</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- SCHEDULE TIME -->
+    <style name="WorkUpdateSchedule">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textColor">#064E3B</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!-- UPDATE WINDOW -->
+    <style name="WorkUpdateWindow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:textColor">#6D8999</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!-- DIVIDER -->
+    <style name="WorkUpdateDivider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginEnd">7dp</item>
+        <item name="android:background">#D9F1E9</item>
+    </style>
+
+    <!-- ACTION COLUMN -->
+    <style name="WorkUpdateActionColumn">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- STATUS -->
+    <style name="WorkUpdateStatus">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_work_update_status</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:paddingTop">9dp</item>
+        <item name="android:paddingBottom">9dp</item>
+        <item name="android:textColor">#087F5B</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- BUTTON -->
+    <style name="WorkUpdateButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@drawable/bg_work_update_button</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <!-- WORK UPDATE ACTION -->
+    <style name="WorkUpdateAction">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">34dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">#0F4D36</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+</resources>

@@ -1,0 +1,50 @@
+
+# Android Studio
+.idea/
+*.iml
+
+# Gradle
+.gradle/
+build/
+*/build/
+
+# Local configuration - do not upload
+local.properties
+
+# Kotlin generated files
+.kotlin/
+
+# Native build files
+.externalNativeBuild/
+.cxx/
+
+# macOS files
+.DS_Store
+
+# Android build outputs
+captures/
+
+# Node.js
+node_modules/
+
+# Python
+venv/
+venv*/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Secrets, local config, and runtime data
+serviceAccountKey.json
+.env
+.env.*
+*.local
+firestore_local_db.json
+*.jks
+*.keystore
+
+# Firebase
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+

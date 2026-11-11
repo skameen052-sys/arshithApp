@@ -1,0 +1,5 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+    <EditText android:id="@+id/edtGroupName" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Enter team name" android:inputType="textCapWords" android:padding="10dp" android:textSize="14sp"/>
+    <EditText android:id="@+id/edtGroupDescription" android:layout_width="match_parent" android:layout_height="90dp" android:layout_marginTop="10dp" android:gravity="top" android:hint="Enter team description" android:inputType="textCapSentences|textMultiLine" android:padding="10dp" android:textSize="14sp"/>
+</LinearLayout>

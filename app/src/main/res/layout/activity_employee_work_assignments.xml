@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F1F8F9">
+
+    <!-- ===================================================== -->
+    <!-- HERO SECTION -->
+    <!-- ===================================================== -->
+
+    <LinearLayout
+        android:id="@+id/assignmentsHero"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="28dp"
+        android:background="@drawable/bg_assignments_hero">
+
+        <!-- Back Button -->
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:text="‹"
+            android:textSize="42sp"
+            android:textColor="#FFFFFF"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Go back" />
+
+        <!-- Hero Title -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="My Assignments"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans" />
+
+        <!-- Hero Subtitle -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="Your tasks, all in one place"
+            android:textSize="15sp"
+            android:textColor="#D5EFEB" />
+
+        <!-- Decorative Pill -->
+
+        <View
+            android:layout_width="120dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/bg_assignments_pill" />
+
+    </LinearLayout>
+
+    <!-- ===================================================== -->
+    <!-- SCROLLABLE CONTENT -->
+    <!-- ===================================================== -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="28dp">
+
+            <!-- ================================================= -->
+            <!-- SECTION TITLE -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="17dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="My Progress"
+                    android:textColor="#18344D"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="TASK TRACKER"
+                    android:textColor="#00695C"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_assignment_count" />
+
+            </LinearLayout>
+
+            <!-- ================================================= -->
+            <!-- SUMMARY CARDS -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!-- ASSIGNED -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="105dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_assignment_assigned"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Assigned"
+                        android:textColor="#49336F"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvAssignedCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="0"
+                        android:textColor="#17112F"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- IN PROGRESS -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="105dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_assignment_progress"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="In Progress"
+                        android:textColor="#855516"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvInProgressCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="0"
+                        android:textColor="#855516"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- COMPLETED -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="105dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_assignment_completed"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Completed"
+                        android:textColor="#21663D"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvCompletedCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="0"
+                        android:textColor="#21663D"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ================================================= -->
+            <!-- FILTER SECTION TITLE -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:layout_marginBottom="13dp"
+                android:text="Filter Assignments"
+                android:textColor="#18344D"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- ================================================= -->
+            <!-- FILTER BUTTONS -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/filterAll"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:background="@drawable/bg_filter_selected"
+                    android:text="All"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:includeFontPadding="false" />
+
+                <TextView
+                    android:id="@+id/filterPending"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="4dp"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:background="@drawable/bg_filter_unselected"
+                    android:text="Pending"
+                    android:textColor="#18344D"
+                    android:textSize="11sp"
+                    android:maxLines="1"
+                    android:includeFontPadding="false" />
+
+                <TextView
+                    android:id="@+id/filterInProgress"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="4dp"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:background="@drawable/bg_filter_unselected"
+                    android:text="In Progress"
+                    android:textColor="#18344D"
+                    android:textSize="10sp"
+                    android:maxLines="1"
+                    android:includeFontPadding="false" />
+
+                <TextView
+                    android:id="@+id/filterCompleted"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:background="@drawable/bg_filter_unselected"
+                    android:text="Completed"
+                    android:textColor="#18344D"
+                    android:textSize="10sp"
+                    android:maxLines="1"
+                    android:includeFontPadding="false" />
+
+            </LinearLayout>
+
+            <!-- ================================================= -->
+            <!-- EMPTY STATE -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/tvEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="25dp"
+                android:gravity="center"
+                android:padding="22dp"
+                android:text="No work assignments yet"
+                android:textColor="#718096"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <!-- ================================================= -->
+            <!-- DYNAMIC ASSIGNMENT CARDS -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:id="@+id/assignmentsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingBottom="10dp" />
+
+            <!-- ================================================= -->
+            <!-- FOOTER EMPTY STATE -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/tvAllCaughtUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:padding="14dp"
+                android:text="You're all caught up!"
+                android:textColor="#47796E"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Existing Application Theme -->
+    <style name="Theme.ArshithConnect"
+        parent="Theme.MaterialComponents.Light.NoActionBar" />
+
+    <!-- Premium Orange Chat Theme -->
+    <style name="Theme.ChatApp"
+        parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/orange_500</item>
+        <item name="colorPrimaryVariant">@color/orange_700</item>
+        <item name="colorOnPrimary">@color/text_on_orange</item>
+        <item name="colorSecondary">@color/orange_400</item>
+
+        <item name="android:colorBackground">@color/chat_bg</item>
+        <item name="android:statusBarColor">@color/surface</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+    </style>
+
+    <!-- Chat Filter Chip Style -->
+    <style name="ChatChip">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+
+        <item name="android:background">@drawable/bg_chip_unselected</item>
+        <item name="android:textColor">@color/text_secondary</item>
+
+    </style>
+
+    <!-- Selected Chat Filter Chip -->
+    <style name="ChatChip.Selected">
+
+        <item name="android:background">@drawable/bg_chip_selected</item>
+        <item name="android:textColor">@color/text_on_orange</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <!-- Circular Shape Style -->
+    <style name="CircleImage">
+
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+
+    </style>
+
+</resources>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F5FC">
+
+    <!-- ================= HEADER ================= -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="28dp"
+        android:background="@drawable/bg_announcement_header">
+
+        <!-- Back Button and Header Icon -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/btnAnnouncementBack"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:text="‹"
+                android:textColor="#FFFFFF"
+                android:textSize="38sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Go back" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:contentDescription="Announcements" />
+
+        </LinearLayout>
+
+        <!-- Main Title -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Announcements"
+            android:textColor="#FFFFFF"
+            android:textSize="29sp"
+            android:textStyle="bold"
+            android:letterSpacing="-0.02" />
+
+        <!-- Subtitle -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Latest company updates and notices"
+            android:textColor="#D8F1EF"
+            android:textSize="14sp" />
+
+        <!-- Stay Informed Badge -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="9dp"
+            android:paddingBottom="9dp"
+            android:text="STAY INFORMED"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08"
+            android:background="@drawable/bg_announcement_badge" />
+
+    </LinearLayout>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Scrollable announcements content -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:clipToPadding="false"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:paddingTop="24dp"
+                android:paddingBottom="28dp">
+
+                <!-- Section Heading -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Company Updates"
+                        android:textColor="#102B43"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAnnouncementCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="9dp"
+                        android:paddingBottom="9dp"
+                        android:text="0 Updates"
+                        android:textColor="#A5D6A7"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:background="@drawable/bg_announcement_count" />
+
+                </LinearLayout>
+
+                <!--
+                    Firebase announcements are added here dynamically.
+
+                    Do not add sample announcement cards inside this
+                    container in XML.
+                -->
+
+                <LinearLayout
+                    android:id="@+id/announcementsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:clipToPadding="false"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!-- ================= EMPTY STATE ================= -->
+
+        <!--
+            Display this only when Firebase has no announcements.
+            This is separate from the ScrollView to prevent overlap
+            with dynamically generated announcement cards.
+        -->
+
+        <LinearLayout
+            android:id="@+id/announcementEmptyState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="28dp"
+            android:background="@drawable/bg_announcement_card"
+            android:visibility="gone">
+
+            <!-- Empty State Icon -->
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:gravity="center"
+                android:text="!"
+                android:textColor="#49336F"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_announcement_icon" />
+
+            <!-- Empty State Title -->
+
+            <TextView
+                android:id="@+id/tvEmptyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="No announcements yet"
+                android:textColor="#17112F"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- Empty State Description -->
+
+            <TextView
+                android:id="@+id/tvNoAnnouncements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Company updates and notices will appear here."
+                android:textColor="#77718A"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

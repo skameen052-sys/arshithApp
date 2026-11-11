@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="?attr/selectableItemBackground"
+    android:paddingStart="16dp"
+    android:paddingTop="13dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="13dp">
+
+    <!-- Profile photo with orange ring -->
+    <FrameLayout
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:background="@drawable/bg_filter_btn"
+        android:padding="3dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgInboxContactPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/orange_100"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/CircleImage"
+                tools:src="@tools:sample/avatars"/>
+
+            <View
+                android:id="@+id/onlineDot"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/bg_online_dot"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+        </FrameLayout>
+    </FrameLayout>
+
+    <!-- Conversation information -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Contact name and time -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvInboxContactName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="Sai Prakash"/>
+
+            <TextView
+                android:id="@+id/tvInboxMessageTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/orange_600"
+                android:textSize="11sp"
+                tools:text="10:30 AM"/>
+
+        </LinearLayout>
+
+        <!-- Last message and unread badge -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvInboxLastMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                tools:text="Hello! How are you?"/>
+
+            <TextView
+                android:id="@+id/tvInboxUnreadCount"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_unread_badge"
+                android:gravity="center"
+                android:minWidth="20dp"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:textColor="@color/text_on_orange"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:text="2"
+                tools:visibility="visible"/>
+
+        </LinearLayout>
+
+        <!-- Pinned, favourite and muted indicators -->
+        <TextView
+            android:id="@+id/tvInboxFlags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/orange_600"
+            android:textSize="11sp"
+            android:visibility="gone"
+            tools:text="📌  ⭐"/>
+
+    </LinearLayout>
+
+    <!-- Conversation options -->
+    <ImageButton
+        android:id="@+id/btnInboxMore"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="3dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="More conversation options"
+        android:padding="8dp"
+        android:src="@drawable/ic_more"
+        app:tint="@color/text_secondary"/>
+
+</LinearLayout>

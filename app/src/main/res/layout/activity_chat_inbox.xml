@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_bg">
+
+    <LinearLayout
+        android:id="@+id/layoutInboxCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/chat_bg">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvInboxTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Messages"
+                    android:textColor="@color/text_primary"
+                    android:textSize="28sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stay connected with your team"
+                    android:textColor="@color/orange_600"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnInboxSettings"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/bg_filter_btn"
+                android:padding="12dp"
+                android:contentDescription="Inbox settings"
+                android:src="@drawable/ic_tune"
+                app:tint="@color/orange_700"/>
+
+        </LinearLayout>
+
+        <!-- Search -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_search"
+            android:gravity="center_vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_search"
+                android:contentDescription="Search"/>
+
+            <EditText
+                android:id="@+id/etSearchInbox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:background="@null"
+                android:hint="Search conversations"
+                android:singleLine="true"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+        <!-- Filter chips -->
+        <HorizontalScrollView
+            android:id="@+id/inboxFilterScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scrollbars="none"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btnFilterAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_chip_selected"
+                    android:gravity="center"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:text="All"
+                    android:textColor="@color/text_on_orange"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/btnFilterUnread"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_chip_unselected"
+                    android:gravity="center"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:text="Unread"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/btnFilterFavorites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_chip_unselected"
+                    android:gravity="center"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:text="Favorites"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/btnFilterGroups"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:background="@drawable/bg_chip_unselected"
+                    android:gravity="center"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:text="Groups"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Active and Archived tabs -->
+        <LinearLayout
+            android:id="@+id/layoutInboxTabs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_segment_track"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/btnActiveChats"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_segment_thumb"
+                android:gravity="center"
+                android:text="Active Chats"
+                android:textColor="@color/orange_700"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/btnArchivedChats"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Archived Chats"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <!-- Selection toolbar -->
+        <LinearLayout
+            android:id="@+id/layoutSelectionToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/bg_chat_selection_toolbar"
+            android:elevation="2dp"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvSelectionCount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:text="1 selected"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/btnSelectionPin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Pin"
+                android:textColor="@color/orange_700"/>
+
+            <TextView
+                android:id="@+id/btnSelectionDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Delete"
+                android:textColor="#C43D2F"/>
+
+            <TextView
+                android:id="@+id/btnSelectionArchive"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Archive"
+                android:textColor="@color/orange_700"/>
+
+            <TextView
+                android:id="@+id/btnSelectionMore"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="More"
+                android:textColor="@color/text_primary"/>
+
+        </LinearLayout>
+
+        <!-- Loading status -->
+        <TextView
+            android:id="@+id/tvInboxStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Loading chats..."
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:visibility="gone"/>
+
+        <!-- Chat list and empty state -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerChatInbox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="85dp"
+                tools:listitem="@layout/item_chat_inbox"/>
+
+            <TextView
+                android:id="@+id/tvInboxEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="24dp"
+                android:text="No conversations yet. Start a new chat!"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- New chat button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabNewChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:contentDescription="Start new chat"
+        android:src="@drawable/ic_add_white"
+        app:backgroundTint="@color/orange_500"
+        app:elevation="8dp"
+        app:rippleColor="@color/orange_200"
+        app:tint="@android:color/white"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

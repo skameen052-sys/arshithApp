@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6FA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Toolbar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:contentDescription="Back"
+                android:focusable="true"
+                android:padding="12dp"
+                android:src="@android:drawable/ic_media_previous" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Employee Profile"
+                android:textColor="#202124"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Profile Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#FFFFFF"
+            android:elevation="3dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <ImageView
+                android:id="@+id/imgEmployeeProfile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="#E8EAF0"
+                android:contentDescription="Employee profile photo"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_myplaces" />
+
+            <TextView
+                android:id="@+id/tvEmployeeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Employee Name"
+                android:textColor="#202124"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Employee Details Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="#FFFFFF"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Employee Details"
+                android:textColor="#202124"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <!-- Employee ID -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Employee ID"
+                android:textColor="#777777"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvEmployeeId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Not available"
+                android:textColor="#202124"
+                android:textSize="16sp" />
+
+            <!-- Email -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Email Address"
+                android:textColor="#777777"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvEmployeeEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Not available"
+                android:textColor="#202124"
+                android:textSize="16sp" />
+
+            <!-- Phone -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Phone Number"
+                android:textColor="#777777"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvEmployeePhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Not available"
+                android:textColor="#202124"
+                android:textSize="16sp" />
+
+            <!-- Department -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Department"
+                android:textColor="#777777"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvEmployeeDepartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Not available"
+                android:textColor="#202124"
+                android:textSize="16sp" />
+
+            <!-- Designation -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Designation"
+                android:textColor="#777777"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvEmployeeDesignation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Not available"
+                android:textColor="#202124"
+                android:textSize="16sp" />
+
+            <!-- Role -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Role"
+                android:textColor="#777777"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvEmployeeRole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Not available"
+                android:textColor="#202124"
+                android:textSize="16sp" />
+
+            <!-- Employee Status -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Status"
+                android:textColor="#777777"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvEmployeeStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Not available"
+                android:textColor="#202124"
+                android:textSize="16sp" />
+
+            <!-- Chat Availability -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Chat Availability"
+                android:textColor="#777777"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvEmployeePresence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Checking availability..."
+                android:textColor="#16865B"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Message Button -->
+        <Button
+            android:id="@+id/btnMessage"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#16865B"
+            android:text="Message"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

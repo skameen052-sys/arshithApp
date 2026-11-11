@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F5FC">
+
+    <!-- ================================================= -->
+    <!-- LEAVE MANAGEMENT SCREEN                           -->
+    <!-- ================================================= -->
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F5FC"
+        android:fillViewport="true"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/requestsScreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ANNOUNCEMENTS-STYLE HEADER -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="28dp"
+                android:background="@drawable/bg_announcement_header">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/btnBack"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:gravity="center"
+                        android:text="‹"
+                        android:textColor="#FFFFFF"
+                        android:textSize="38sp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="Go back" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:contentDescription="Leave management" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Leave Management"
+                    android:textColor="#FFFFFF"
+                    android:textSize="29sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="-0.02" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Apply for leave and manage your requests."
+                    android:textColor="#D8F1EF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="9dp"
+                    android:text="MANAGE YOUR LEAVE"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.08"
+                    android:background="@drawable/bg_announcement_badge" />
+
+            </LinearLayout>
+
+            <!-- MAIN CONTENT -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:paddingTop="24dp"
+                android:paddingBottom="28dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="My Leave Requests"
+                        android:textColor="#102B43"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- APPLY BUTTON -->
+
+                <Button
+                    android:id="@+id/btnShowApplyLeave"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:backgroundTint="#00796B"
+                    android:elevation="3dp"
+                    android:text="APPLY FOR LEAVE"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- LEAVE REQUEST CARDS -->
+
+                <LinearLayout
+                    android:id="@+id/requestsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical" />
+
+                <!-- EMPTY STATE -->
+
+                <LinearLayout
+                    android:id="@+id/leaveEmptyState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="28dp"
+                    android:background="@drawable/bg_announcement_card">
+
+                    <TextView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:gravity="center"
+                        android:text="✓"
+                        android:textColor="#49336F"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:background="@drawable/bg_announcement_icon" />
+
+                    <TextView
+                        android:id="@+id/tvNoRequests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:gravity="center"
+                        android:text="No active leave requests"
+                        android:textColor="#17112F"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- ================================================= -->
+    <!-- APPLY FOR LEAVE SCREEN                            -->
+    <!-- ================================================= -->
+
+    <ScrollView
+        android:id="@+id/applyLeaveScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F5FC"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/applyLeaveForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- APPLY HEADER -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="28dp"
+                android:background="@drawable/bg_announcement_header">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/btnFormBack"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:gravity="center"
+                        android:text="‹"
+                        android:textColor="#FFFFFF"
+                        android:textSize="38sp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="Back to leave requests" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:contentDescription="New leave request" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Apply for Leave"
+                    android:textColor="#FFFFFF"
+                    android:textSize="29sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="-0.02" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Fill in the details for your leave request."
+                    android:textColor="#D8F1EF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="9dp"
+                    android:text="NEW LEAVE REQUEST"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.08"
+                    android:background="@drawable/bg_announcement_badge" />
+
+            </LinearLayout>
+
+            <!-- FORM CONTENT -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:paddingTop="24dp"
+                android:paddingBottom="28dp">
+
+                <!-- FORM CARD -->
+
+                <LinearLayout
+                    android:id="@+id/leaveFormCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp"
+                    android:background="#EAF7F5"
+                    android:elevation="2dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Leave Details"
+                        android:textColor="#102B43"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <!-- LEAVE TYPE -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="Leave Type"
+                        android:textColor="#40394B"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinnerLeaveType"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="6dp"
+                        android:backgroundTint="#7651E8"
+                        android:spinnerMode="dropdown" />
+
+                    <!-- LEAVE DURATION -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Leave Duration"
+                        android:textColor="#40394B"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinnerLeaveDuration"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="6dp"
+                        android:backgroundTint="#7651E8"
+                        android:spinnerMode="dropdown" />
+
+                    <!-- FROM DATE -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="From Date"
+                        android:textColor="#40394B"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnFromDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="#00796B"
+                        android:text="SELECT START DATE"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <!-- TO DATE -->
+
+                    <TextView
+                        android:id="@+id/labelToDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="To Date"
+                        android:textColor="#40394B"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnToDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="#00796B"
+                        android:text="SELECT END DATE"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <!-- HOURLY START TIME -->
+
+                    <TextView
+                        android:id="@+id/labelStartTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Start Time"
+                        android:textColor="#40394B"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btnStartTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="#F0ECFF"
+                        android:text="SELECT START TIME"
+                        android:textColor="#087F5B"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <!-- HOURLY END TIME -->
+
+                    <TextView
+                        android:id="@+id/labelEndTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="End Time"
+                        android:textColor="#40394B"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btnEndTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="#F0ECFF"
+                        android:text="SELECT END TIME"
+                        android:textColor="#087F5B"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <!-- REASON -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Reason"
+                        android:textColor="#40394B"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etLeaveReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="8dp"
+                        android:background="#F2F4F5"
+                        android:gravity="top|start"
+                        android:hint="Enter reason for leave"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:padding="14dp"
+                        android:textColor="#241E31"
+                        android:textColorHint="#40394B"
+                        android:textSize="14sp" />
+
+                    <!-- SUBMIT BUTTON -->
+
+                    <Button
+                        android:id="@+id/btnSubmitLeave"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="24dp"
+                        android:backgroundTint="#00796B"
+                        android:elevation="3dp"
+                        android:text="SUBMIT LEAVE REQUEST"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

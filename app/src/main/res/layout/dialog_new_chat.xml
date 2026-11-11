@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:paddingTop="4dp">
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/btnCloseNewChat"
+            android:layout_marginEnd="8dp"
+            android:text="New Message or Group"
+            android:textColor="#24213B"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnCloseNewChat"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Close dialog"
+            android:gravity="center"
+            android:text="×"
+            android:textColor="#64748B"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <!-- DIRECT AND GROUP TABS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        android:background="#F5F1FC"
+        android:padding="3dp">
+
+        <Button
+            android:id="@+id/btnDirectTab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_filter_selected"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="Direct Message"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btnGroupTab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_filter_unselected"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="Create Team Group"
+            android:textAllCaps="false"
+            android:textColor="#8138E8"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <!-- GROUP DETAILS -->
+    <LinearLayout
+        android:id="@+id/layoutGroupFields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="12dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edtNewGroupName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_chat_composer"
+            android:hint="Group name *"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:singleLine="true"
+            android:textColor="#24213B"
+            android:textColorHint="#9290A0" />
+
+        <EditText
+            android:id="@+id/edtNewGroupDescription"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_chat_composer"
+            android:hint="Description (optional)"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:singleLine="true"
+            android:textColor="#24213B"
+            android:textColorHint="#9290A0" />
+
+    </LinearLayout>
+
+    <!-- SELECTED MEMBERS -->
+    <TextView
+        android:id="@+id/txtSelectedCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="4dp"
+        android:text="Add Members (0 selected)"
+        android:textColor="#475569"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <!-- SEARCH CONTACTS -->
+    <EditText
+        android:id="@+id/edtContactSearch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_chat_composer"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="10dp"
+        android:hint="Search employees and admins..."
+        android:imeOptions="actionSearch"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:singleLine="true"
+        android:textColor="#24213B"
+        android:textColorHint="#9290A0"
+        android:textSize="14sp" />
+
+    <!-- CONTACT SECTION -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        android:text="EMPLOYEES AND ADMINISTRATORS"
+        android:textColor="#64748B"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- CONTACT LIST -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerContacts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/txtNoContacts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="Loading contacts..."
+            android:textColor="#89869F"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <!-- GROUP ACTION BUTTON -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="14dp"
+        android:text="Create Group Channel"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:visibility="gone"
+        app:backgroundTint="#8138E8"
+        app:cornerRadius="14dp" />
+
+</LinearLayout>
