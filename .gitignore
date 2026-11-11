@@ -35,11 +35,9 @@ __pycache__/
 *.py[cod]
 
 # Secrets, local config, and runtime data
-serviceAccountKey.json
 .env
 .env.*
 *.local
-firestore_local_db.json
 *.jks
 *.keystore
 

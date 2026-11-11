@@ -1,0 +1,275 @@
+{
+  "admins": [],
+  "employees": [],
+  "attendance": [],
+  "notifications": [],
+  "officeSettings": [
+    {
+      "id": 1,
+      "timing_type": "REGULAR",
+      "startTime": "09:30",
+      "endTime": "18:30",
+      "graceMinutes": 2,
+      "start_time": "09:30",
+      "end_time": "18:30",
+      "grace_minutes": 2,
+      "special_date": null,
+      "special_occasion": null,
+      "created_at": "2026-10-31T14:46:16.817043+00:00",
+      "updated_at": "2026-10-31T14:46:16.817070+00:00"
+    }
+  ],
+  "settings": [],
+  "users": [
+    {
+      "id": "lQmFmzADTfRVjW49HkswaZyyuot1",
+      "uid": "lQmFmzADTfRVjW49HkswaZyyuot1",
+      "email": "saiprakash@arshithgroup.com",
+      "role": "employee",
+      "is_active": true,
+      "approval_status": "APPROVED",
+      "status": "approved",
+      "employee_id": "AFI-0079",
+      "employeeId": "AFI-0079",
+      "name": "Sai Prakash",
+      "updated_at": "2026-10-31T14:46:16.758569+00:00",
+      "_firestore_id": "lQmFmzADTfRVjW49HkswaZyyuot1"
+    },
+    {
+      "id": "Rv0fCllzm8MFn9D5C5p6mnasawK2",
+      "uid": "Rv0fCllzm8MFn9D5C5p6mnasawK2",
+      "email": "chanukyab@arshithgroup.com",
+      "role": "employee",
+      "is_active": true,
+      "approval_status": "APPROVED",
+      "status": "approved",
+      "employee_id": "AFI-9068",
+      "employeeId": "AFI-9068",
+      "name": "chanukya",
+      "updated_at": "2026-10-31T15:14:12.631516+00:00",
+      "_firestore_id": "Rv0fCllzm8MFn9D5C5p6mnasawK2"
+    }
+  ],
+  "attendances": [],
+  "leaves": [],
+  "holidays": [],
+  "meetings": [],
+  "announcements": [],
+  "teams": [],
+  "assignments": [],
+  "work_updates": [],
+  "registration_requests": [],
+  "office_timings": [],
+  "audit_logs": [],
+  "chat_messages": [
+    {
+      "conversation_id": "dm_AFI-0079_AFI-9068",
+      "participant_ids": [
+        "AFI-0079",
+        "AFI-9068"
+      ],
+      "chat_type": "direct",
+      "target_id": "AFI-9068",
+      "team_id": null,
+      "team_name": "",
+      "sender_id": "AFI-0079",
+      "sender_name": "Sai Prakash",
+      "sender_role": "employee",
+      "sender_avatar": "S",
+      "sender_photo": "https://firebasestorage.googleapis.com/v0/b/arshith-connect-attendance.firebasestorage.app/o/profilePhotos%2FlQmFmzADTfRVjW49HkswaZyyuot1%2Fprofile.jpg?alt=media&token=6f13277f-5f1c-4f5d-83b9-d2bdf25b7ee5",
+      "receiver_id": "AFI-9068",
+      "receiver_name": "chanukya",
+      "content": "Hi",
+      "attachments": [],
+      "reply_to": null,
+      "reactions": {},
+      "is_pinned": false,
+      "read_by": [
+        "AFI-0079",
+        "AFI-9068"
+      ],
+      "created_at": "2026-10-31T15:00:59.924468+00:00",
+      "updated_at": "2026-10-31T15:14:17.169024+00:00",
+      "id": "CHA-1793458860237",
+      "_firestore_id": "CHA-1793458860237"
+    },
+    {
+      "conversation_id": "team_TEA-1793432552023",
+      "participant_ids": [
+        "TEA-1793432552023"
+      ],
+      "chat_type": "team",
+      "target_id": "TEA-1793432552023",
+      "team_id": "TEA-1793432552023",
+      "team_name": "ganesh",
+      "sender_id": "AFI-0079",
+      "sender_name": "Sai Prakash",
+      "sender_role": "employee",
+      "sender_avatar": "S",
+      "sender_photo": "https://firebasestorage.googleapis.com/v0/b/arshith-connect-attendance.firebasestorage.app/o/profilePhotos%2FlQmFmzADTfRVjW49HkswaZyyuot1%2Fprofile.jpg?alt=media&token=6f13277f-5f1c-4f5d-83b9-d2bdf25b7ee5",
+      "receiver_id": "TEA-1793432552023",
+      "receiver_name": "ganesh",
+      "content": "Working on it right away! \ud83d\udc4d",
+      "attachments": [],
+      "reply_to": null,
+      "reactions": {},
+      "is_pinned": false,
+      "read_by": [
+        "AFI-0079"
+      ],
+      "created_at": "2026-10-31T15:01:21.975743+00:00",
+      "updated_at": "2026-10-31T15:01:22.102233+00:00",
+      "id": "CHA-1793458882102",
+      "_firestore_id": "CHA-1793458882102"
+    },
+    {
+      "conversation_id": "team_TEA-1793432552023",
+      "participant_ids": [
+        "TEA-1793432552023"
+      ],
+      "chat_type": "team",
+      "target_id": "TEA-1793432552023",
+      "team_id": "TEA-1793432552023",
+      "team_name": "ganesh",
+      "sender_id": "AFI-0079",
+      "sender_name": "Sai Prakash",
+      "sender_role": "employee",
+      "sender_avatar": "S",
+      "sender_photo": "https://firebasestorage.googleapis.com/v0/b/arshith-connect-attendance.firebasestorage.app/o/profilePhotos%2FlQmFmzADTfRVjW49HkswaZyyuot1%2Fprofile.jpg?alt=media&token=6f13277f-5f1c-4f5d-83b9-d2bdf25b7ee5",
+      "receiver_id": "TEA-1793432552023",
+      "receiver_name": "ganesh",
+      "content": "Hiee",
+      "attachments": [],
+      "reply_to": null,
+      "reactions": {},
+      "is_pinned": false,
+      "read_by": [
+        "AFI-0079"
+      ],
+      "created_at": "2026-10-31T15:01:25.612369+00:00",
+      "updated_at": "2026-10-31T15:01:25.728776+00:00",
+      "id": "CHA-1793458885728",
+      "_firestore_id": "CHA-1793458885728"
+    },
+    {
+      "conversation_id": "dm_AFI-0079_AFI-9077",
+      "participant_ids": [
+        "AFI-0079",
+        "AFI-9077"
+      ],
+      "chat_type": "direct",
+      "target_id": "AFI-9077",
+      "team_id": null,
+      "team_name": "",
+      "sender_id": "AFI-0079",
+      "sender_name": "Sai Prakash",
+      "sender_role": "employee",
+      "sender_avatar": "S",
+      "sender_photo": "https://firebasestorage.googleapis.com/v0/b/arshith-connect-attendance.firebasestorage.app/o/profilePhotos%2FlQmFmzADTfRVjW49HkswaZyyuot1%2Fprofile.jpg?alt=media&token=6f13277f-5f1c-4f5d-83b9-d2bdf25b7ee5",
+      "receiver_id": "AFI-9077",
+      "receiver_name": "Bhanu Sree",
+      "content": "Hii",
+      "attachments": [],
+      "reply_to": null,
+      "reactions": {},
+      "is_pinned": false,
+      "read_by": [
+        "AFI-0079"
+      ],
+      "created_at": "2026-10-31T15:01:49.768594+00:00",
+      "updated_at": "2026-10-31T15:01:50.032549+00:00",
+      "id": "CHA-1793458910032",
+      "_firestore_id": "CHA-1793458910032"
+    },
+    {
+      "conversation_id": "team_TEA-1793458983182",
+      "participant_ids": [
+        "TEA-1793458983182"
+      ],
+      "chat_type": "team",
+      "target_id": "TEA-1793458983182",
+      "team_id": "TEA-1793458983182",
+      "team_name": "alkabzb",
+      "sender_id": "AFI-0079",
+      "sender_name": "Sai Prakash",
+      "sender_role": "employee",
+      "sender_avatar": "S",
+      "sender_photo": "https://firebasestorage.googleapis.com/v0/b/arshith-connect-attendance.firebasestorage.app/o/profilePhotos%2FlQmFmzADTfRVjW49HkswaZyyuot1%2Fprofile.jpg?alt=media&token=6f13277f-5f1c-4f5d-83b9-d2bdf25b7ee5",
+      "receiver_id": "TEA-1793458983182",
+      "receiver_name": "alkabzb",
+      "content": "Hii",
+      "attachments": [],
+      "reply_to": null,
+      "reactions": {},
+      "is_pinned": false,
+      "read_by": [
+        "AFI-0079"
+      ],
+      "created_at": "2026-10-31T15:03:06.891290+00:00",
+      "updated_at": "2026-10-31T15:03:06.990897+00:00",
+      "id": "CHA-1793458986990",
+      "_firestore_id": "CHA-1793458986990"
+    },
+    {
+      "conversation_id": "team_TEA-1793432552023",
+      "participant_ids": [
+        "TEA-1793432552023"
+      ],
+      "chat_type": "team",
+      "target_id": "TEA-1793432552023",
+      "team_id": "TEA-1793432552023",
+      "team_name": "ganesh",
+      "sender_id": "AFI-0079",
+      "sender_name": "Sai Prakash",
+      "sender_role": "employee",
+      "sender_avatar": "S",
+      "sender_photo": "https://firebasestorage.googleapis.com/v0/b/arshith-connect-attendance.firebasestorage.app/o/profilePhotos%2FlQmFmzADTfRVjW49HkswaZyyuot1%2Fprofile.jpg?alt=media&token=6f13277f-5f1c-4f5d-83b9-d2bdf25b7ee5",
+      "receiver_id": "TEA-1793432552023",
+      "receiver_name": "ganesh",
+      "content": "Working on it right away! \ud83d\udc4d",
+      "attachments": [],
+      "reply_to": null,
+      "reactions": {},
+      "is_pinned": false,
+      "read_by": [
+        "AFI-0079"
+      ],
+      "created_at": "2026-10-31T15:13:20.684997+00:00",
+      "updated_at": "2026-10-31T15:13:20.996965+00:00",
+      "id": "CHA-1793459600996",
+      "_firestore_id": "CHA-1793459600996"
+    },
+    {
+      "conversation_id": "dm_AFI-0079_AFI-9068",
+      "participant_ids": [
+        "AFI-0079",
+        "AFI-9068"
+      ],
+      "chat_type": "direct",
+      "target_id": "AFI-9068",
+      "team_id": null,
+      "team_name": "",
+      "sender_id": "AFI-0079",
+      "sender_name": "Sai Prakash",
+      "sender_role": "employee",
+      "sender_avatar": "S",
+      "sender_photo": "https://firebasestorage.googleapis.com/v0/b/arshith-connect-attendance.firebasestorage.app/o/profilePhotos%2FlQmFmzADTfRVjW49HkswaZyyuot1%2Fprofile.jpg?alt=media&token=6f13277f-5f1c-4f5d-83b9-d2bdf25b7ee5",
+      "receiver_id": "AFI-9068",
+      "receiver_name": "chanukya",
+      "content": "Hiee",
+      "attachments": [],
+      "reply_to": null,
+      "reactions": {},
+      "is_pinned": false,
+      "read_by": [
+        "AFI-0079",
+        "AFI-9068"
+      ],
+      "created_at": "2026-10-31T15:13:30.427028+00:00",
+      "updated_at": "2026-10-31T15:14:17.289379+00:00",
+      "id": "CHA-1793459610684",
+      "_firestore_id": "CHA-1793459610684"
+    }
+  ],
+  "chat_channels": []
+}
